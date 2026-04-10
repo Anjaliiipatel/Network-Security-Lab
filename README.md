@@ -24,12 +24,18 @@ ARP/DNS Analysis: Investigated address resolution and domain queries to identify
 
 Capture vs. Display Filters: > Refining the data stream: Capture filters reduce CPU load by discarding packets at the NIC level, while Display filters allow for deep-dive analysis of a saved trace.
 
-2. Eavesdropping: Telnet vs. SSH
+# 2. Eavesdropping: Telnet vs. SSH
 A comparative study of plaintext vs. encrypted protocols.
+
+<img width="777" height="523" alt="Screenshot 2026-04-09 233939" src="https://github.com/user-attachments/assets/5010640c-974e-470c-af2a-5581b29bdafc" />
 
 The Vulnerability: Using Wireshark, I successfully intercepted a Telnet session and recovered the plaintext username and password.
 
+<img width="770" height="425" alt="image" src="https://github.com/user-attachments/assets/534d39a6-f517-4b16-ab55-91c6fce8369f" />
+
 The Solution: Analyzed SSH handshakes, identifying the Diffie-Hellman key exchange and the symmetric encryption (AES) used to secure the tunnel.
+
+<img width="776" height="416" alt="image" src="https://github.com/user-attachments/assets/a7c0ad25-27cd-4384-9476-a283dedf5e20" />
 
 3. SSH Port Forwarding (Tunneling)
 I implemented a "poor man's VPN" by tunneling insecure HTTP traffic through an encrypted SSH connection.
