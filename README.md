@@ -30,6 +30,8 @@ A comparative study of plaintext vs. encrypted protocols.
 <img width="777" height="523" alt="Screenshot 2026-04-09 233939" src="https://github.com/user-attachments/assets/5010640c-974e-470c-af2a-5581b29bdafc" />
 
 The Vulnerability: Using Wireshark, I successfully intercepted a Telnet session and recovered the plaintext username and password.
+<img width="780" height="670" alt="image" src="https://github.com/user-attachments/assets/6b76ed35-2370-44e7-9297-598036538909" />
+
 
 <img width="770" height="425" alt="image" src="https://github.com/user-attachments/assets/534d39a6-f517-4b16-ab55-91c6fce8369f" />
 
@@ -37,35 +39,31 @@ The Solution: Analyzed SSH handshakes, identifying the Diffie-Hellman key exchan
 
 <img width="776" height="416" alt="image" src="https://github.com/user-attachments/assets/a7c0ad25-27cd-4384-9476-a283dedf5e20" />
 
-3. SSH Port Forwarding (Tunneling)
+# 3. SSH Port Forwarding (Tunneling)
 I implemented a "poor man's VPN" by tunneling insecure HTTP traffic through an encrypted SSH connection.
 
 Mechanism: Forwarded local port 7777 to the remote web server on port 80.
+<img width="780" height="443" alt="image" src="https://github.com/user-attachments/assets/7ff8c1fb-15f8-4a9e-9dcb-9be0ddb2eef1" />
+
 
 Security Insight: This demonstrates how attackers can create backdoors or bypass firewalls, but also how admins can secure legacy plaintext applications.
 
-4. TCP RST (Reset) Attack
+# 4. TCP RST (Reset) Attack
 I performed a Denial of Service (DoS) attack by injecting spoofed TCP packets with the RST flag set.
 
 Process: Using hping3, I monitored the sequence numbers of an active Telnet session and injected a reset packet to force-close the connection.
+<img width="777" height="255" alt="Screenshot 2026-04-09 234518" src="https://github.com/user-attachments/assets/651ffcbf-2e7e-4cdb-8ca4-f77bd1d9fdf5" />
+
 
 Result: The connection was instantly terminated, demonstrating the inherent trust vulnerabilities in the TCP protocol.
 
-5. "Low and Slow" DoS: Slowloris
+# 5. "Low and Slow" DoS: Slowloris
 (If you completed the extra credit)
 
 Tested the Apache server against a Slowloris attack, which exhausts the server's connection pool by keeping HTTP headers open indefinitely.
 
-Defense: Analyzed Apache thread limits and discussed mitigation strategies like mod_reqtimeout.
+<img width="782" height="441" alt="image" src="https://github.com/user-attachments/assets/5910e5bc-8120-4d33-a9bd-a00a16ecc4df" />
 
-🛡️ Hardening & Security Best Practices
-To secure the environment, I implemented:
-
-SSH Key-Based Authentication: Moved away from password-based logins to RSA/ED25519 key pairs.
-
-Configuration Hardening: Disabled SSH port forwarding and restricted root logins to minimize the attack surface.
-
-📈 Conclusions
-The lab confirms that security must be integrated at the protocol design level. Transitioning from Telnet to SSH, and understanding the mechanics of a TCP Reset attack, highlights that encryption is only one piece of the puzzle—protocol logic and state management are equally vital.
+# The lab confirms that security must be integrated at the protocol design level. Transitioning from Telnet to SSH, and understanding the mechanics of a TCP Reset attack, highlights that encryption is only one piece of the puzzle—protocol logic and state management are equally vital.
 
 
