@@ -19,8 +19,10 @@ I conducted traffic analysis to distinguish between standard network operations 
 ARP/DNS Analysis: Investigated address resolution and domain queries to identify spoofing risks.
 
 <img width="781" height="340" alt="image" src="https://github.com/user-attachments/assets/b8c4e2ff-6d33-46aa-8f66-14a3e582142f" />
+                                    Figure 1: ARP Protocols Analysis 
 
 <img width="782" height="489" alt="image" src="https://github.com/user-attachments/assets/c4ec2c56-15ab-4cdc-878a-08af60b604ee" />
+                                    Figure 1: DNS Protocols Analysis 
 
 Capture vs. Display Filters: > Refining the data stream: Capture filters reduce CPU load by discarding packets at the NIC level, while Display filters allow for deep-dive analysis of a saved trace.
 
