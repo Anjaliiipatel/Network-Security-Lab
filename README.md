@@ -24,7 +24,7 @@ ARP/DNS Analysis: Investigated address resolution and domain queries to identify
 
 <img width="782" height="489" alt="image" src="https://github.com/user-attachments/assets/c4ec2c56-15ab-4cdc-878a-08af60b604ee" />
 
-                                    Figure 1: DNS Protocols Analysis 
+                                    Figure 2: DNS Protocols Analysis 
 
 Capture vs. Display Filters: > Refining the data stream: Capture filters reduce CPU load by discarding packets at the NIC level, while Display filters allow for deep-dive analysis of a saved trace.
 
@@ -33,15 +33,23 @@ A comparative study of plaintext vs. encrypted protocols.
 
 <img width="777" height="523" alt="Screenshot 2026-04-09 233939" src="https://github.com/user-attachments/assets/5010640c-974e-470c-af2a-5581b29bdafc" />
 
+                                    Figure 3: ARP Protocols Analysis 
+
+
 The Vulnerability: Using Wireshark, I successfully intercepted a Telnet session and recovered the plaintext username and password.
 <img width="780" height="670" alt="image" src="https://github.com/user-attachments/assets/6b76ed35-2370-44e7-9297-598036538909" />
 
+                                    Figure 4: ARP Protocols Analysis 
 
 <img width="770" height="425" alt="image" src="https://github.com/user-attachments/assets/534d39a6-f517-4b16-ab55-91c6fce8369f" />
+
+                                    Figure 5: ARP Protocols Analysis 
 
 The Solution: Analyzed SSH handshakes, identifying the Diffie-Hellman key exchange and the symmetric encryption (AES) used to secure the tunnel.
 
 <img width="776" height="416" alt="image" src="https://github.com/user-attachments/assets/a7c0ad25-27cd-4384-9476-a283dedf5e20" />
+
+                                    Figure 6: ARP Protocols Analysis 
 
 # 3. SSH Port Forwarding (Tunneling)
 I implemented a "poor man's VPN" by tunneling insecure HTTP traffic through an encrypted SSH connection.
