@@ -64,6 +64,6 @@ Tested the Apache server against a Slowloris attack, which exhausts the server's
 
 <img width="782" height="441" alt="image" src="https://github.com/user-attachments/assets/5910e5bc-8120-4d33-a9bd-a00a16ecc4df" />
 
-# The lab confirms that security must be integrated at the protocol design level. Transitioning from Telnet to SSH, and understanding the mechanics of a TCP Reset attack, highlights that encryption is only one piece of the puzzle—protocol logic and state management are equally vital.
+The lab confirms that security must be integrated at the protocol design level. Transitioning from Telnet to SSH, and understanding the mechanics of a TCP Reset attack, highlights that encryption is only one piece of the puzzle—protocol logic and state management are equally vital.
 
 
