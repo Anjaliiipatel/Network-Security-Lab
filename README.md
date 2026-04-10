@@ -1,5 +1,4 @@
-# Network-Security-Lab
-Anjali Patel
+# Network-Security-Lab - Anjali Patel
 
 This project explores the vulnerabilities within the TCP/IP stack and evaluates the effectiveness of various security mechanisms. Using a controlled VM environment, I performed network reconnaissance, eavesdropping attacks, and protocol-level disruptions to understand how "baked-in" security compares to "bolt-on" security.
 
